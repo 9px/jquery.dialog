@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta  name="viewport" content="width=1000,user-scalable=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<title>婆婆窗</title>
+</head>
+<body style="font:normal 16px Microsoft Yahei;color:#333">
+<div id="test"></div>
+<h3>关于:</h3>
+插件名称:婆婆窗(基于jQuery) v0.2<br />
+作者:野草 (QQ:317602365)<br />
+日期:2013/12/04<br />
+<a href="http://www.github.com/jinzhe/jquery.dialog/">点击下载</a>
+<h3>功能介绍:</h3>
+1.支持自定义标题/宽高/内容/是否显示关闭按钮/自定义回调<br />
+2.支持根据内容自动调整窗口高度<br/>
+3.在现代浏览器浏览效果最佳并且向下兼容显示<br />
+4.支持拖动操作，并兼容移动触屏设备<br />
+5.支持拖动限定在窗口内
+<h3>调用方法:</h3>
+<pre style="font-family:Arial;font-size:11px;border:1px dotted #eee;padding:20px;">
+$.dialog({
+    mask:false,
+    close:true,
+    drag:true,
+    width:300,
+    height:'auto',
+    title:'婆婆窗欢迎您!',
+    html:'内容',
+    callback:function(){
+    	//do it...
+    }
+});
+</pre>
+<!-- Duoshuo Comment BEGIN -->
+	<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"jinzhenet"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- Duoshuo Comment END -->
+
+<link rel="stylesheet" href="styles/jquery.dialog.min.css"/>
+<script src="http://www.oschina.net/js/2012/jquery-1.7.1.min.js"></script>
+<script src="scripts/jquery.dialog.min.js"></script>
+<script>
+$(function(){
+	$.dialog({
+		mask:false,
+		height:'auto',
+		title:'婆婆窗欢迎您!',
+		html:'婆婆是一种称谓，通常用于称呼老年妇女、外祖母（外婆）、丈夫的母亲。丈夫的母亲也可直称妈妈，广东地区称“奶奶”。又因丈夫的父亲被称为公公，两者合称为公婆。 英文中的“公公婆婆”二词是：“father-in-law、mother-in-law”。按字面理解，“公公婆婆（包括岳父岳母）”是我们法律意义上的父母，因为合法的婚姻你才称配偶的父母为父母，这种解释倒也合理。',
+		callback:function(){
+			console.log('我是婆婆窗的回调!')
+		}
+	});
+});
+</script>
+
+</body>
+</html>
